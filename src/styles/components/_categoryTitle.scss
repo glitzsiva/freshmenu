@@ -1,0 +1,30 @@
+
+.category-title {
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    font-weight: $font-weight-bold;
+
+    & span {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 1px;
+            background: $gray-500;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        &::before {
+            left: -65px;
+        }
+        &::after {
+            right: -65px;
+        }
+    }
+}

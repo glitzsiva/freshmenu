@@ -1,0 +1,18 @@
+
+@import './scss/bootstrap';
+// @import './custom/variable';
+@import './components/customTopbar';
+@import './custom/scrollbar';
+@import './components/quickLinks';
+@import './components/categoryTitle';
+@import './components/foodCard';
+@import './custom/common';
+@import './components/footer';
+@import './components/header';
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 41px;
+}

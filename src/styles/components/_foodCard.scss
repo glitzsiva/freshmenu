@@ -1,0 +1,30 @@
+
+.product-card {
+    display: inline-block;
+    width: calc(50% - 0.5em);
+    margin: 0 0.25em;
+    vertical-align: top;
+    margin-top: 0.5em;
+    & img {
+        width: 100%;
+        border-radius: $border-radius;
+    }
+    &__info {
+        padding: $spacer-md 0;
+        border-bottom: 1px solid;
+        margin-bottom: $spacer-md;
+        &__title h6 {
+            font-size: 0.9em;
+            display: inline;
+            vertical-align: top;
+            margin: 0;
+            font-weight: $font-weight-bold;
+        }
+        &__actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+        }
+    }
+}

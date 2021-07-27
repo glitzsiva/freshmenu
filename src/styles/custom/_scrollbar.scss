@@ -1,0 +1,12 @@
+
+.scrollbar {
+
+    &::-webkit-scrollbar {
+        display: none;
+        width: 0!important;
+        background: 0 0;
+    }   
+    & > img:first-child {
+    margin-left: 16px;
+    }
+}
