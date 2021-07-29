@@ -1,19 +1,18 @@
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-
+import { useSelector } from "react-redux";
 
 const QuickLinks = () => {
+    const QuickLinks = useSelector(state => state.quickLinks);
+
 
     return (
         <div style={{ top: '77px' }} className='sticky-top bg-white shadow'>
             <div className='header-category scrollbar'>
-                <a className='active'>Meals at 99</a>
-                <a className=''>Breakfast </a>
-                <a className=''>Continental</a>
-                <a className=''>Indian / Thalis</a>
-                <a className=''>Fit N Fab</a>
-                <a className=''>Sandwiches &#38; More</a>
+                {QuickLinks.map(({ id, linkName }, index) => (<a key={id} className={index === 0 ? 'active' : ''}>{linkName}</a>))}
+
+
             </div>
         </div>)
 }

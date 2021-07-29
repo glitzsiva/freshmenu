@@ -1,30 +1,10 @@
 
 
-import { v4 as uuid } from "uuid"
-
-
-const bannerImages = [
-    {
-        id: uuid(),
-        imageUrl: 'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_384/rng/md/carousel/production/k7xunqkohzfzczqlqprn'
-    },
-    {
-        id: uuid(),
-        imageUrl: 'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_384/rng/md/carousel/production/k7xunqkohzfzczqlqprn'
-    },
-    {
-        id: uuid(),
-        imageUrl: 'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_384/rng/md/carousel/production/k7xunqkohzfzczqlqprn'
-    },
-    {
-        id: uuid(),
-        imageUrl: 'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_384/rng/md/carousel/production/k7xunqkohzfzczqlqprn'
-    },
-]
+import { useSelector } from "react-redux";
 
 
 const BannerSlider = () => {
-
+    const bannerImages = useSelector(state => state.bannerSlider);
     return (
         <div style={{
             overflowX: 'auto'
