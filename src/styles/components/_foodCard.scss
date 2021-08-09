@@ -25,6 +25,33 @@
             justify-content: space-between;
             align-items: center;
             margin-top: 5px;
+            &__addBtn{
+                width: 75px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $white !important;
+                border-radius: $border-radius;
+            }
+            &__counterBtn{
+                background-color: $primary;
+                & span{
+                    width: 25px;
+                    height: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                    cursor: pointer;
+                    color: $white !important;
+                    &:nth-of-type(2){
+                        height: 28px;
+                        line-height: 28px;
+                        background: $white;
+                        margin: 1px !important;
+                        color: $primary !important;
+                    }
+                }
+            }
         }
     }
 }

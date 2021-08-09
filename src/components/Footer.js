@@ -18,7 +18,7 @@ const Footer = () => {
                 <i className="fa fa-search footer-menu__link__icon" aria-hidden="true"></i>
                 <span>Explore</span>
             </a>
-            <a className='footer-menu__link'>
+            <a href='/cart' className='footer-menu__link'>
                 <i className="fa fa-cart-arrow-down footer-menu__link__icon" aria-hidden="true"></i>
                 <span>Cart</span>
             </a>

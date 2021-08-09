@@ -1,0 +1,56 @@
+
+.container.login{
+    padding-top: 38%;
+    background: url('https://www.freshmenu.com/pages/common/images/fm-join-form.jpg') top center no-repeat;
+    background-size: 100%;
+}
+.login{
+    &__social{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #5872a7;
+        color: $white;
+        height: 33px;
+        text-decoration: none;
+        & i.fa.fa-facebook{
+            font-size: $font-size-base;
+        } 
+    }
+    &__divider span {
+        margin: 15% 0 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #828181;
+        &::before,
+        &::after{
+            content: '';
+            height: 1px;
+            background: #828181;
+            width: 45%;
+            margin: 0;
+        }
+        &::after {
+            margin-left: 1em;
+        }
+        &:before {
+            margin-right: 1em;
+        }
+    }
+    & .form-control{
+        border: none !important;
+        border-bottom: 1px solid $gray-300 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        color: $gray-100;
+    }
+}
+.register{
+    background: none !important;
+    padding-top: 1.5rem !important;
+    .login__divider span {
+        margin: 8% 0 !important;
+    }
+}

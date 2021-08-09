@@ -1,16 +1,18 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 
 //Custom Imports
-import quickLinksReducer from '../reducers/quickLinks';
-import bannerSliderReducer from '../reducers/bannerSlider';
+
+
+
+
+import rootReducers from '../reducers/rootReducers';
+
+
 
 
 const configurStore = () => {
     const store = createStore(
-        combineReducers({
-            quickLinks: quickLinksReducer,
-            bannerSlider: bannerSliderReducer
-        }),
+        rootReducers,
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
     return store;

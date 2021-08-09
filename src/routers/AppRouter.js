@@ -2,12 +2,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Header from '../components/Header';
-// import Cart from '../components/cart/Cart';
-import Home from '../screens/home/Home';
+
+/// Custom Imports 
+import Home from '../screens/Home';
+import Login from '../screens/Login';
 import configurStore from '../store/store'
 import { Provider } from 'react-redux';
-
+import Register from '../screens/Register';
+import LayoutWrapper from '../hoc/LayoutWrapper';
 
 const store = configurStore();
 
@@ -15,14 +17,17 @@ const AppRouter = () => (
 
     <Provider store={store}>
         <BrowserRouter>
-            <>
-                <Header />
-                <Switch>
-                    <Route exact path='/'>
-                        <Home />
-                    </Route>
-                </Switch>
-            </>
+            <Switch>
+                <Route exact path='/' component={LayoutWrapper(Home)} />
+
+                <Route exact path='/login'>
+                    <Login />
+                </Route>
+                <Route exact path='/register'>
+                    <Register />
+                </Route>
+            </Switch>
+
         </BrowserRouter>
     </Provider>
 );
