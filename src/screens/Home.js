@@ -6,7 +6,7 @@ import QuickLinks from "../components/QuickLinks";
 import CategoryTitle from "../components/CategoryTitle";
 import FoodCardLists from "../components/FoodCardLists";
 import Footer from "../components/Footer";
-
+// import CartInfo from "../components/CartInfo";
 
 const Home = () => (
     <>
@@ -17,6 +17,7 @@ const Home = () => (
         <CategoryTitle />
         <FoodCardLists />
         <Footer />
+        {/* <CartInfo /> */}
     </>
 );
 

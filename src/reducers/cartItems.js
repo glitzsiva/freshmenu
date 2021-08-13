@@ -19,7 +19,7 @@ const cartItemsReducer = (state = defaultCartItems, action) => {
                 if (cartItem.id === action.id) {
                     return {
                         ...cartItem,
-                        itemCount: action.itemCount
+                        ...action.cartItem
                     }
                 }
                 else {

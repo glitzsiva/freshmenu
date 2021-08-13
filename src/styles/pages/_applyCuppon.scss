@@ -1,0 +1,68 @@
+
+.apply-cuppon{  
+    padding-bottom: 1rem;
+    & > h6{
+        font-size: .8rem;
+        font-weight: bold;
+    }
+
+    &__card{
+        border: 1px solid $gray-400;
+        background-color: $white;
+        display: flex;
+        padding: 1rem .75rem 1rem;
+        &__info{
+            flex: 1;
+            & p{
+                color: $gray-600;
+                font-size: .85rem;
+                width: 70%;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.bank-offers{
+
+
+    &__card{
+        display: flex;
+        padding: 1rem 0;
+        border-bottom: 1px solid $gray-400;
+        & img{
+            max-height: 30px;
+            width: 100%;
+            padding: 5px;
+
+        }
+        &__info{
+            margin-left: 1rem;
+            & p{
+                margin-bottom: 5px;
+                color: $gray-600;
+                line-height:1.2;
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.btn-apply.primary{
+    font-size:small;
+    color: $primary;
+    background-color: $white;
+    border: 1px solid $primary;
+    border-radius: 2px;
+    padding: .1rem.5rem;
+}
+.btn-apply.primary:hover,.btn-outline-primary:hover{
+    color: $white;
+    background-color: $primary;
+    box-shadow: none !important;
+}

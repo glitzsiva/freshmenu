@@ -1,19 +1,25 @@
 
 
 
-export const incrementCount = (id, prevItemCount) => (
+export const incrementCount = ({ id, price }, prevItemCount) => (
     {
         type: 'UPDATE_COUNT',
         id,
-        itemCount: prevItemCount + 1
+        cartItem: {
+            itemCount: prevItemCount + 1,
+            totalPrice: price * (prevItemCount + 1)
+        }
     }
 );
-export const decrementCount = (id, prevItemCount) => {
+export const decrementCount = ({ id, price, }, prevItemCount) => {
     if (prevItemCount !== 1) {
         return {
             type: 'UPDATE_COUNT',
             id,
-            itemCount: prevItemCount - 1
+            cartItem: {
+                itemCount: prevItemCount - 1,
+                totalPrice: price * (prevItemCount - 1)
+            }
         }
     }
     else {
@@ -26,12 +32,15 @@ export const decrementCount = (id, prevItemCount) => {
 };
 
 
-export const addItem = (id) => (
+export const addItem = ({ id, price, foodName }) => (
     {
         type: 'ADD_ITEM',
         cartItem: {
             id,
-            itemCount: 1
+            price,
+            foodName,
+            itemCount: 1,
+            totalPrice: price
         }
     }
 );

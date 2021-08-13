@@ -22,10 +22,10 @@ const Header = () => {
                 <NavbarBrand tag={Link} to="/"><img height="25" src={process.env.PUBLIC_URL + "images/header-logo.svg"} alt="logo" /></NavbarBrand>
                 <Nav className="mr-auto flex-row" navbar>
                     <NavItem>
-                        <NavLink tag={Link} to="/cart/"><i className="fa fa-bell-o" aria-hidden="true"></i></NavLink>
+                        <NavLink tag={Link} to="/notify/"><i className="fa fa-bell-o" aria-hidden="true"></i></NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink tag={Link} to="/cart/"><i className="fa fa-percent" aria-hidden="true"></i><span > Offers</span></NavLink>
+                        <NavLink tag={Link} to="/offers/"><i className="fa fa-percent" aria-hidden="true"></i><span > Offers</span></NavLink>
                     </NavItem>
                 </Nav>
             </div>

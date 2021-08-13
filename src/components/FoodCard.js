@@ -31,7 +31,7 @@ const FoodCard = (props) => {
                             props.counter === undefined ?
                                 <Button color="primary"
                                     onClick={() => {
-                                        props.dispatch(addItem(foodDetail.id))
+                                        props.dispatch(addItem(foodDetail))
                                     }}
                                     className='product-card__info__actions__addBtn'
                                 > Add
@@ -39,7 +39,7 @@ const FoodCard = (props) => {
                                 <div className='d-flex product-card__info__actions__counterBtn'>
                                     <span
                                         onClick={(event) => {
-                                            props.dispatch(decrementCount(foodDetail.id, props.counter.itemCount))
+                                            props.dispatch(decrementCount(foodDetail, props.counter.itemCount))
                                         }}>
                                         -
                                     </span>
@@ -47,7 +47,7 @@ const FoodCard = (props) => {
                                     <span
                                         className='add-count'
                                         onClick={() => {
-                                            props.dispatch(incrementCount(foodDetail.id, props.counter.itemCount))
+                                            props.dispatch(incrementCount(foodDetail, props.counter.itemCount))
                                         }}
                                     >+
                                     </span>
